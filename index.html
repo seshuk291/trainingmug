@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>training mug</title>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel='stylesheet prefetch' href='css/docs.min.css'>
+    <link rel="stylesheet" href="css/autocomplete.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
+    <!-- Custom Fonts -->
+    <!-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700|Roboto:400,500,700" rel="stylesheet">
+    <link rel=icon href="images/Trainingmugfavicons.png" sizes="any" type="image/svg+xml">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/ng-rateit.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel=icon href="images/Trainingmugfavicons.png" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/star-rating.min.css" media="all" type="text/css">
+    <link rel="stylesheet" href="css/popup.css" media="all" type="text/css">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/viewports.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.min.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+    <body id="page-top" ng-app="MyApp" ng-controller="DemoCtrl">
+    <div class="loader"></div>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/"><img src="./images/logo.png" alt="training-mug"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <!-- Inpuit box -->
+                     <div class="col-md-5 col-xs-5 search" id="nav-search">
+                        <div class="input-group">
+                          <!-- <input type="text" class="form-control input-lg" placeholder="Which course do you want to learn?"> -->
+                        <div ng-controller="DemoCtrl as ctrl" layout="column" ng-cloak="" class="form-control input-lg">
+                          <md-content layout="column">
+                            <form ng-submit="$event.preventDefault()">
+                              <md-autocomplete
+                                  md-selected-item="ctrl.selectedItem"
+                                  md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+                                  md-search-text="ctrl.searchText"
+                                  md-selected-item-change="ctrl.selectedItemChange(item)"
+                                  md-items="item in ctrl.querySearch(ctrl.searchText) | filter:ctrl.searchText"
+                                  md-item-text="item.name"
+                                  md-min-length="0"
+                                  placeholder="Which Course do you want to learn?"
+                                  md-menu-class="autocomplete-custom-template">
+                                <md-item-template>
+                                  <div class="item-title">
+                                    <md-icon><img ng-src="{{item.imageurl}}"></md-icon>
+                                    <span class="inner-item-title">{{item.name}}</span><br>
+                                  </div>
+                                  <div class="item-metadata">
+                                    <span class="item-metastat">
+                                      <span class="fa fa-files-o"></span>
+                                      <span>{{item.lectures}}</span> lectures
+                                    </span>
+                                    <span class="item-metastat">
+                                      <span class="fa fa-play-circle"></span>
+                                      <span>{{item.hours}}</span>+ Hrs Video sessions
+                                    </span>
+                                    <span class="item-metastat">
+                                    <span class="fa fa-wpforms"></span>
+                                      <span>{{item.quizes}}</span>+ Quizes
+                                    </span>
+                                  </div>
+                                </md-item-template>
+                              </md-autocomplete>
+                            </form>
+                          </md-content>
+                        </div>
+                          <span class="input-group-addon btn btn-lg btn-primary search-icon">
+                              <i class="glyphicon glyphicon-search"></i>
+                          </span>
+                       </div>
+                    </div> 
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="dropdown"> 
+                            <a class="btn-nav" id="all-cour">
+                                <i class="glyphicon glyphicon-menu-hamburger"></i>
+                                <span class="nav-link">All Courses</span>
+                            </a>
+			                    <div class="navigation all-courses">
+			                      <ul class="sidebar-nav">
+			                        <li class="has-sub"> <a href="#">
+                                    <i class="fa fa-file-code-o" aria-hidden="true"></i>Java</a>
+    			                          <ul>
+    			                            <li class=""><a href="/courses/java-jee-angular"> Java JEE Angular  1.1</a>
+    			                            </li>
+                                      <li><a href="#">Complete Java Programming </a></li>
+                                      <li><a href="#">SQL & JDBC</a></li>
+                                      <li><a href="/courses/full-stack-web-development">Web Development Using Servlets & JSP</a></li>
+                                      <li><a href="#">Struts Framework</a></li>
+                                      <li><a href="#">Spring Developing a web application from scratch using Struts + JSP + MySQL</a></li>
+                                      <li><a href="#">Spring Framework</a></li>
+    			                            <li><a href="#">Hibernate</a></li>
+    			                          </ul>
+                                  
+			                        </li>
+			                        <li class="has-sub"> <a href="#"><i class="fa fa-database" aria-hidden="true"></i>
+			                        Database</a>
+			                          <ul>
+			                            <li><a href="#">SQL/ PLSQL</a></li>
+			                            <li><a href="#">Designing an application database from scratch</a></li>
+			                          </ul>
+			                        </li>
+			                        <li class="has-sub"><a href="#"><i class="fa fa-android" aria-hidden="true"></i>
+										            Application Development</a>
+			                          <ul>
+			                            <li><a href="/courses/android-application-development">Android Development</a></li>
+			                            <li><a href="#">Developing an application from scratch using Android
+                                      PhoneGap </a></li>
+			                          </ul>
+			                        </li>
+			                        <li class="has-sub"> <a href="#"><i class="fa fa-user" aria-hidden="true"></i>
+										          Client Side Technologies</a>
+                                <ul>
+                                  <li><a href="#">HTML5 & CSS3</a></li>
+                                  <li><a href="#">JavaScript , AJAX, jQuery, JSON</a></li>
+                                </ul>
+                              </li>
+			                        <li  class="has-sub"> <a href="#"><i class="fa fa-book" aria-hidden="true"></i>
+										          Angular JS </a>
+                                <ul>
+                                  <li><a href="#">Angular JS 1.x</a></li>
+                                  <li><a href="#">Angular JS 2.0</a></li>
+                                  <li><a href="#">PhoneGap & Angular JS</a></li>
+                                </ul>
+                              </li>
+			                        <li  class="has-sub"><a href="#"><i class="fa fa-internet-explorer" aria-hidden="true"></i>
+                                     Web Services</a>
+                                 <ul>
+                                    <li><a href="#">SOAP AND RESTFUL</a></li>
+                                    <li><a href="#">Developing an application from scratch Using Spring + Hibernate + WebServices</a></li>
+                                </ul>  
+                              </li>
+                              <li  class="has-sub"><a href="#"><i class="fa fa-certificate" aria-hidden="true"></i>Certification Trainings</a>
+                                 <ul>
+                                    <li><a href="#">OCJP (Oracle Certified Java Programmer)</a></li>
+                                    <li><a href="#">OCWCD (Oracle Certified Web Component Developer)</a></li>
+                                </ul>    
+                              </li>
+			                      </ul>
+		                	</div>
+                   </li>   
+                    <li> 
+                        <a href="#">
+                        <span class="nav-link">Corporate Training</span></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="nav-link">Become Instructor</span></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="nav-link">Blog</span>
+                        </a>
+                    </li>
+                    <li>
+                    <div>
+                        <md-button  class="md-raised md-warn login" data-toggle="modal" data-target="#login-modal" id="login-button" ng-click="form()">
+                          <span class="nav-link">Login</span>
+                        </md-button>
+                        <li id="account" class="hide">
+                            <a href="#" class="dropdown">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="nav-link dropdown-toggle" data-toggle="dropdown">Account<span class="caret"></span></span>
+                                <ul class="dropdown-menu">
+                                  <li class="dropdown-header">Dropdown header 1</li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li class="divider"></li>
+                                  <li class="dropdown-header">Dropdown header 2</li>
+                                  <li><a href="#">About Us</a></li>
+                                </ul>
+                            </a>
+                        </li>
+                    </div>
+                    
+                      
+                      <!-- <md-button class="md-raised md-warn">Warn</md-button> -->
+
+                    </li>
+                </ul>
+            </div>
+            
+        <!-- /.container-fluid -->
+    </nav>
+            
+             
+             
+             
+             <div ng-view autoscroll="true"> 
+              
+            </div>        
+        
+             
+                  
+                       
+                            
+                                 
+                                      
+                                           
+                                                
+                                                          
+        <footer class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 footer-nav-container">
+            <div class="col-md-3 footer-nav">
+                <div>
+                    <h3>TrainingMug</h3>
+                    <div class="footer-list">
+                        <a href="#/">
+                            <li>About us</li>
+                        </a>
+                        <a href="#/">
+                            <li>Contact us</li>
+                        </a>
+                        <a href="#/">
+                            <li>Blog</li>
+                        </a>
+                        <a href="#/">
+                            <li>Careers</li>
+                        </a>
+                    </div>
+                    <div class="part-2 footer-list">
+                        <a href="#/">
+                            <li>Terms & Conditions</li>
+                        </a>
+                        <a href="#/">
+                            <li>Refund policy</li>
+                        </a>
+                        <a href="#/">
+                            <li>Privacy policy</li>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <h3>Work with us</h3>
+                    <div class="footer-list">
+                        <a href="">
+                            <li>Become Instructor</li>
+                        </a>
+                        <a href="">
+                            <li>Hire From TrainingMug</li>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <h3>Follow us</h3>
+                    <div class="social-icons footer-list">
+                        <a href="#"><img src="images/socialicons/facebook.svg" class="social-icon"></a>
+                        <a href="#"><img src="images/socialicons/twitter.svg" class="social-icon"></a>
+                        <a href="#"><img src="images/socialicons/youtube.svg" class="social-icon"></a>
+                        <a href="#"><img src="images/socialicons/linkedin.svg" class="social-icon"></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3>Subscribe to our newsletter</h3>
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="jhonDoe@email.com">
+                    <span class="input-group-btn">
+                                <button class="btn btn-warning" type="button">Subscribe</button>
+                              </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <hr>
+        <div class="col-md-12 footer-nav-container">
+            <div class="col-md-12">
+                <p class="copyright">copyright 2016 &copy;TrainingMug.All rights reserved </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="container hide" id="floating-footer">
+    <div class="row navbar-fixed-bottom stick">
+        <div class="col-md-12 col-md-offset-1">
+            <div class="col-md-3">
+                <div class="dropup">
+                    <span class="dropdown-toggle" id="tt" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <span class="fa fa-phone"></span> Request a call back
+                    <span class="caret"></span>
+
+                    </span>
+                    <span class="dropdown-menu call-back">
+                        <h3 class="text-center">Request a call back</h3>
+                        <a type="reset" class="close-f dropdown-toggle" data-toggle="dropdown">&times;</a>
+                        <form name="requestform" action="" style="padding:10px" ng-click="$event.stopPropagation()">
+                            <p id="textp">Leave your details and Our training consultant will get back to you</p>
+                            <md-input-container flex="100" style="width:300px">
+                              <label>Your Name</label>
+                              <md-icon md-svg-src="img/icons/ic_person_24px.svg"></md-icon>
+                              <input required name="clientName" ng-model="project.clientName">
+                              <div ng-messages="requestform.clientName.$error">
+                                <div ng-message="required">This is required.</div>
+                              </div>
+                            </md-input-container>
+                            <md-input-container flex="100" style="width:300px; line-height:12px">
+                                <label>Email</label>
+                                <md-icon md-svg-src="img/icons/ic_email_24px.svg"></md-icon>
+                                <input required type="email" name="clientEmail" ng-model="clientEmail" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                                <div ng-messages="requestform.clientEmail.$error" role="alert">
+                                    <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                        Please enter a valid email
+                                    </div>
+                                </div>
+
+                            </md-input-container>
+                            
+                            <md-input-container class="md-block" flex-gt-sm>
+                                        <label>Phone Number</label>
+                                        <md-icon><i class="fa fa-phone fa-2x"></i></md-icon>
+                                        <input name="phone" ng-model="contactno" ng-pattern="/^[0-9]{10}$/" ng-required="true" />
+                                        <div ng-messages="requestform.phone.$error">
+                                            <div ng-message="required">A phone number is required</div>
+                                            <div ng-message="pattern">Please enter a valid phone number.</div>
+                                        </div>
+                            </md-input-container>
+                            <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
+                                <span style="color:#555">I agree to be contacted over mail</span>
+                    </md-checkbox>
+
+                    <md-button class="md-raised md-primary" style="float:right">Send</md-button>
+                    </form>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3 contact-f" style="width:32%">
+                <span><i class="fa fa-phone">&nbsp;</i>+1-234-567-8970 &nbsp; &nbsp;</span>
+                <span><i class="fa fa-envelope-o">&nbsp;</i>trainingmug@gmail.com</span>
+            </div>
+
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</div>
+
+<div ng-controller="FormCtrl" class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-show="showDialog === true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header login_modal_header">
+                <a type="reset" class="close" data-dismiss="modal" ng-click="resetForm(loginform)" aria-hidden="true">&times;</a>
+                <h2 class="modal-title" id="myModalLabel">Login to Your Account</h2>
+            </div>
+            <div class="modal-body login-modal">
+                <br/>
+                <div class="clearfix"></div>
+                <div id='social-icons-conatainer'>
+
+                    <div class='modal-body-left'>
+                        <form name="myform1" id="form-1" ng-submit="submitLoginForm(loginform)">
+                            <div id="loginid">
+                                <md-content class="md-no-momentum">
+                                    <md-input-container class="md-icon-float md-block">
+                                        <label>Email</label>
+                                        <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+                                        <input type="email" ng-model="loginform.email" name="loginemail" ng-pattern="/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,4})$/" ng-required="true">
+                                        <div ng-messages="myform1.loginemail.$error" role="alert">
+                                            <div ng-message="required" id="error_email">Enter your email</div>
+                                            <div ng-message="myform1.loginemail.$error.pattern" style="font-size:12px">Invalid E-mail</div>
+                                        </div>
+                                    </md-input-container>
+                                    <md-input-container class="md-icon-float md-block">
+                                        <label class="item item-input">password</label>
+                                        <md-icon><i class="fa fa-lock fa-2x"></i></md-icon>
+                                        <input name="password1" type="password" ng-model="loginform.password" required minlength="6">
+                                        <div ng-messages="myform1.password1.$error">
+                                            <div ng-message="required">A password is required.</div>
+                                            <div ng-message="minlength">At least 6 characters required.</div>
+                                        </div>
+                                    </md-input-container>
+                                </md-content>
+
+                                <md-button type="submit" class="md-raised md-warn modal-login-btn"> <span ng-show="loginSpinButtonText == 'Authenticating...'"><i class="glyphicon glyphicon-refresh spinning"></i></span> {{loginSpinButtonText}}
+                                </md-button>
+                                <a type="button" class="login-link text-center" ng-click="close()" data-toggle="modal" data-target=".bd-example-modal-sm">Lost your password?</a>
+                            </div>
+                        </form>
+
+                        <form name="myForm" ng-submit="SignUpFormController(signupform)" id="form-2">
+                            <div ng-hide="reg"></div>
+                            <div class="register" id="registerid">
+                                <md-content class="md-no-momentum">
+                                    <md-input-container class="md-icon-float md-block">
+                                        <label>Name</label>
+                                        <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+                                        <input type="text" ng-model="signupform.userName" name="userName" ng-pattern="/^[a-zA-Z][a-z0-9_-]{3,15}$/" ng-required="true">
+                                        <div ng-messages="myForm.userName.$error" role="alert">
+                                            <div ng-message="required">Enter Your Name</div>
+                                            <div data-ng-show="(myForm.userName.$error.pattern || myForm.userName.$error.minlength)" style="font-size:12px">Invalid UserName</div>
+                                        </div>
+                                    </md-input-container>
+                                    <md-input-container class="md-icon-float md-block">
+                                        <label>Email</label>
+                                        <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+                                        <input type="email" ng-model="signupform.email" name="registeremail" ng-pattern="/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,4})$/" ng-required="true">
+                                        <div ng-messages="myForm.registeremail.$error" role="alert">
+                                            <div ng-message="required">Enter your email</div>
+                                            <div data-ng-show="myForm.registeremail.$error.pattern" style="font-size:12px">Invalid E-mail</div>
+                                        </div>
+                                    </md-input-container>
+
+                                    <md-input-container class="md-block" flex-gt-sm>
+                                        <label>Phone Number</label>
+                                        <md-icon><i class="fa fa-phone fa-2x"></i></md-icon>
+                                        <input name="phone" ng-model="signupform.contactno" ng-pattern="/^[0-9]{10}$/" ng-required="true" />
+                                        <div ng-messages="myForm.phone.$error">
+                                            <div ng-message="required">A phone number is required</div>
+                                            <div ng-message="pattern">Please enter a valid phone number.</div>
+                                        </div>
+                                    </md-input-container>
+
+                                    <md-input-container class="md-icon-float md-block">
+                                        <label class="item item-input">password</label>
+                                        <md-icon><i class="fa fa-lock fa-2x"></i></md-icon>
+                                        <input name="password" type="password" ng-model="signupform.password" ng-required="true" minlength="6">
+                                        <div ng-messages="myForm.password.$error">
+                                            <div ng-message="required">A password is required.</div>
+                                            <div data-ng-show="myForm.password.$error.minlength" style="font-size:12px">At least 6 characters required.</div>
+                                        </div>
+                                    </md-input-container>
+                                    <md-input-container class="md-icon-float md-block">
+                                        <label class="item item-input">Confirm password</label>
+                                        <md-icon><i class="fa fa-lock fa-2x"></i></md-icon>
+                                        <input name="confirmPassword" type="password" ng-model="signupform.confirmPassword" compare-to="signupform.password" ng-required="true" data-match="signupform.password">
+
+                                        <div ng-messages="myForm.confirmPassword.$error">
+                                            <div ng-message="required">Confirm your password.</div>
+                                            <div data-ng-show="myForm.confirmPassword.$error.match && !myForm.confirmPassword.$error.required" style="font-size:12px">The passwords do not match.</div>
+                                        </div>
+                                    </md-input-container>
+
+
+                                </md-content>
+                                <div class="form-group">
+                                    <input type="checkbox" id="checkbox" aria-label="I accept terms and conditions" ng-model="signupform.termsNConditions" name="check" ng-required="!isChecked">
+                                    <span>I agree to be contacted over mail</span>
+                                    </input>
+                                </div>
+                                <md-button type="submit" class="md-raised md-warn modal-login-btn">
+                                    <span ng-show="spinButtonText == 'Creating Account...'"><i class="glyphicon glyphicon-refresh spinning"></i></span> {{signUpSpinButtonText}}
+                                </md-button>
+                                <span style="font-size: 13px;">By Signing up, you agree to the <a href="#" style="color: #182a90;">Terms & Conditions</a></span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class='modal-body-right'>
+                        <div class="modal-social-icons">
+                            <p class="social-login-text"></p>
+                            <md-button class="md-raised md-primary modal-login-btn">
+                                <div class="icon">
+                                    <i class="fa fa-facebook modal-icons"></i>
+                                </div>
+                                Facebook
+                            </md-button>
+                            <md-button class="md-raised md-default modal-login-btn hide" id="linkedin">
+                                <div class="icon">
+                                    <i class="fa fa-linkedin modal-icons"></i>
+                                </div>
+                                Linkedin
+                            </md-button>
+                        </div>
+                    </div>
+                    <div class="center-line-login center-line-register" id='center-line'> OR </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="action-button">
+                    <p class="newto-alert" style="font-size:14px">New to TrainingMug ?</p>
+                    <md-button class="md-raised modal-register-btn">SIGN UP</md-button>
+
+                    <md-button class="md-raised modal-login-btnbtn">Had an account ? Login</md-button>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<form name="fpassform" action="">
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="newModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" id="f-pass">
+                <div class="f-pass-header">
+                    <h2 style="color:#ffffff">Forgot your Password</h2>
+                    <a type="reset" class="close-f" data-dismiss="modal">&times;</a>
+                </div>
+                <div class="f-pass-body">
+                    <md-content>
+                        <p class="pr-text">To reset your password, enter your registered email address here.
+                        </p>
+                        <md-input-container class="md-icon-float md-block input-fp" style="line-height:12px">
+                            <label>Email</label>
+                            <md-icon id="mail" md-svg-src="img/icons/ic_email_24px.svg"></md-icon>
+                            <input required type="email" name="clientEmail" ng-model="clientEmail" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                            <md-button type="submit" class="md-raised md-warn input-group-addon reset" ng-click="reset()">
+                                send
+                            </md-button>
+                            <div ng-messages="fpassform.clientEmail.$error" role="alert">
+                                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                    Please enter a valid email
+                                </div>
+                            </div>
+
+                        </md-input-container>
+                        <a type="button" id="signup-r" style="float:right;margin-right: 30px; margin-bottom: 10px;" data-toggle="modal" data-target="#login-modal">Sign up?</a>
+                    </md-content>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- CDN -->
+<!-- jQuery -->
+<script src="vendor/jquery-3.1.1.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<!-- Angular js -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+<script src="js/angular-animate.js"></script>
+<script src="js/angular-aria.js"></script>
+<script src="js/angular-messages.js"></script>
+<script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
+<!-- Angular Material Library -->
+<script src="vendor/ng-rateit.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
+<!--<script src="js/star-rating.min.js" type="text/javascript"></script>-->
+<script src="js/creative.js"></script>
+<script src="vendor/typed.js"></script>
+<script src="vendor/owl.carousel.min.js"></script>
+<script src="js/angular-validation-match.min.js"></script>
+<script src="vendor/jquery.waypoints.min.js"></script>
+<!--<script src="vendor/scrollreveal/scrollreveal.js"></script>-->
+
+<!-- local Library -->
+<script src="js/angular.app.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+
+<!-- <script src="js/vendor/popup.js"></script> -->
+
+    </body>
+</html>

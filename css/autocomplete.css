@@ -1,0 +1,104 @@
+.autocompletedemoCustomTemplate .autocomplete-custom-template li {
+  border-bottom: 2px solid #ccc;
+  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  white-space: normal; 
+  /*overflow:visible !important;*/
+}
+
+.autocompletedemoCustomTemplate .autocomplete-custom-template li:last-child {
+  border-bottom-width: 0; 
+}
+
+.autocompletedemoCustomTemplate .autocomplete-custom-template .item-title,
+.autocompletedemoCustomTemplate .autocomplete-custom-template .item-metadata {
+  display: inline-block;
+  line-height: 2; 
+}
+
+.md-autocomplete-suggestions li{
+  line-height: 20px;
+  overflow:visible;
+  /*margin:10px 0;*/
+  border-bottom: 1px solid #ccc;
+}
+
+
+md-autocomplete input:not(.md-input){
+  height:25px;
+}
+
+.input-group {
+  overflow: hidden;
+}
+md-autocomplete button md-icon {
+    top: 40%;
+ }
+ md-autocomplete button{
+  margin:0px !important;
+ }
+
+ .md-whiteframe-1dp, .md-whiteframe-z1{
+  box-shadow: none;
+  overflow: hidden;
+ }
+ md-autocomplete button {
+    position: relative;
+    line-height: 0px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+     margin-top: 5px; 
+    cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    padding: 0;
+    font-size: 0px;
+     background: transparent; 
+    margin: auto 5px;
+}
+ md-autocomplete button svg{
+  margin-top: 2px;
+ }
+
+ md-icon img{
+  height: auto;
+  width: 50px;
+  float:left;
+  margin-left: -12px;
+}
+
+.md-autocomplete-suggestions li{
+  height:50px;
+}
+.inner-item-title{
+      margin-left: 18px;
+      font-size: 100%;
+      font-weight: bold;
+    }
+.item-metadata {
+    margin-left: 38px;
+    margin-top: 3px;
+}
+.item-metastat .fa{
+  font-size: 20px;
+  color:#00bcf0;
+  margin-left: 10px;
+}
+
+.modal-content button:focus{
+  background-color: none !important;
+}
+/*POP UP CSS*/
+.owl-buttons .fa{
+  font-size: 1em;
+}
+
+.autocomplete-custom-template li {
+    border-bottom: 1px solid #ccc;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    white-space: normal;
+}

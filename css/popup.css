@@ -1,0 +1,453 @@
+.login_modal_footer {
+    margin-top: 5px;
+}
+
+.login_modal_header .modal-title {
+    font-family: 'Nunito', sans-serif;
+    
+}
+.mh .modal-title{
+    margin-top:2px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group .login-field-icon {
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 3px;
+    -webkit-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
+    padding-top: 2%;
+}
+
+.login-modal {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.btn-default:hover {
+    color: #ffffff;
+}
+
+.btn-warning {
+    background-color: rgb(234, 78, 29);
+    border-color: rgb(234, 78, 29);
+}
+
+.btn-warning:hover {
+    background-color: #2196f3;
+    border-color: #2196f3;
+}
+
+.login_modal_header,
+.login_modal_footer {
+    background: #111d61 !important;
+    color: #fff;
+}
+
+.modal-register-btn {
+    margin: 4% 33% 2% 33%;
+    width: 100%;
+}
+
+.modal-login-btnbtn {
+    margin: 4% 33% 2% 33%;
+    width: 100%;
+}
+
+
+/*.login-modal input{height:40px; box-shadow: none; border:1px solid #ddd;}*/
+
+.modal-body-left {
+    float: left;
+    width: 50%;
+    padding-right: 4%;
+    border-right: 2px solid #009688;
+}
+
+.modal-body-right {
+    float: right;
+    width: 47%;
+}
+
+.login-link {
+    float: right;
+    cursor: pointer;
+}
+
+.login-link:hover {
+    text-decoration: none;
+}
+
+.modal-social-icons {
+    padding: 0 10%;
+}
+
+.facebook,
+.twitter,
+.google,
+.linkedin {
+    width: 100%;
+    height: 40px;
+    padding-top: 2%;
+    margin-top: 2%;
+}
+
+.modal-icons {
+    margin-right: 20px;
+}
+
+.google,
+.google:hover {
+    background-color: #dd4b39;
+    border: 2px solid #dd4b39;
+    color: #fff;
+}
+
+.twitter,
+.twitter:hover {
+    background-color: #00aced;
+    border: 2px solid #00aced;
+    color: #fff;
+}
+
+.facebook,
+.facebook:hover {
+    background-color: #3b5999;
+    border: 2px solid #3b5999;
+    color: #fff;
+}
+
+.linkedin,
+.linkedin:hover {
+    background-color: #007bb6;
+    border: 2px solid #007bb6;
+    color: #fff;
+}
+
+#social-icons-conatainer {
+    position: relative;
+}
+
+#center-line {
+    position: absolute;
+    right: 266px;
+    background: #009688;
+    border: 4px solid #fbfbfb;
+    border-radius: 20px;
+    padding: 4px;
+    color: #ffffff;
+}
+
+.modal-login-btn {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+    margin-left: 0px;
+}
+
+#modal-launcher {
+    margin: 30% 0 0 30%;
+}
+
+.register {
+    opacity: 0;
+    display: none;
+}
+
+.modal-login {
+    opacity: 0;
+    display: none;
+}
+
+.modal {
+    overflow-y: auto;
+}
+
+
+/* custom class to override .modal-open */
+
+body {
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+}
+
+body.modal-open {
+    overflow: auto;
+}
+
+
+/*material css*/
+
+.md-button {
+    text-transform: none;
+    min-height: 0px;
+}
+
+.services .md-button {
+    height: 30px;
+    min-width: 88px;
+    line-height: 26px;
+}
+
+nav .md-button {
+    height: 30px;
+    min-width: 88px;
+    line-height: 26px;
+}
+
+ul li {
+    margin-left: 0px;
+    padding: 0;
+    margin-top: 0px;
+    list-style-position: inside;
+}
+
+md-checkbox {
+    margin-right: 0px;
+}
+
+.inputdemoIcons .inputIconDemo {
+    min-height: 48px;
+}
+
+.inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.email {
+    color: green;
+}
+
+.inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.name {
+    color: dodgerblue;
+}
+
+.inputdemoIcons md-input-container.md-input-invalid > md-icon.email,
+.inputdemoIcons md-input-container.md-input-invalid > md-icon.name {
+    color: red;
+}
+
+
+/*.navBardemoBasicUsage md-content .ext-content {
+  padding: 50px;
+  margin: 20px;
+  background-color: #FFF2E0; }*/
+
+md-content {
+    background-color: #ffffff !important;
+}
+
+md-input-container {
+    /*margin: 10px 0;*/
+    vertical-align: middle;
+}
+
+md-icon {
+    color: #009688 !important;
+}
+
+.md-input {
+    border-color: #009688;
+    height: 10px;
+}
+
+.modal-login-btnbtn,
+.modal-register-btn {
+    margin: 2% 33% 2% 33%;
+    width: 37%;
+}
+
+.icon {
+    float: left;
+    margin-left: 10px;
+    border-right: 1px solid #ffffff;
+}
+
+.modal-social-icons .md-default {
+    color: #ffffff;
+    background-color: #0077B5;
+}
+
+.fa-linkedin {
+    margin-right: 15px;
+}
+
+.center-line-login {
+    top: 95px;
+}
+
+.center-line-register {
+    top: 235px;
+}
+
+.close {
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 1;
+}
+
+.modal-header .close:hover {
+    background-color: none !important;
+}
+
+md-input-container {
+    margin: 17px 0px 0px 0px;
+    vertical-align: middle;
+}
+
+.action-button .md-button.md-raised {
+    color: rgb(255, 255, 255);
+    background-color: #03A9F4;
+}
+
+.action-button .md-button.md-raised:hover {
+    background-color: #ff5722 !important;
+}
+
+.social-login-text {
+    text-align: center;
+    color: #607D8B;
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+md-checkbox.md-default-theme.md-checked .md-icon,
+md-checkbox.md-checked .md-icon {
+    background-color: #F44336;
+}
+
+.newto-alert {
+    margin-left: 3%;
+    /* padding-top: 2%; */
+    margin-bottom: -12px;
+    padding-top: 33px;
+    color: #ff5722;
+    text-align: center;
+}
+
+.modal-header {
+    padding: 15px;
+}
+
+.modal-body {
+    position: relative;
+    padding: 0px 15px;
+}
+
+.form-group {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.modal-title {
+    margin: 0;
+    line-height: 1.428571;
+    font-size: 160%;
+}
+
+.modal-social-icons .md-button {
+    font-size: 20px;
+}
+
+#f-pass {
+    background-color: #ffffff;
+    color: #555;
+    width: 400px;
+}
+
+#f-pass h2 {
+    font-size: 120%;
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+    color: #fdfdfd !important;
+}
+
+.f-pass-header {
+    background-color: #111d61;
+    color: #fff;
+}
+
+.f-pass-body {
+    height: 93px;
+}
+
+.resetelement.style {
+    float: right;
+    margin-top: -24px;
+}
+
+.reset {
+    margin-left: 0px;
+    border-radius: 3px !important;
+    float: right;
+    margin-top: 4px;
+}
+
+.input-fp {
+    line-height: 12px;
+    height: 70px;
+    padding-top: 16px;
+}
+
+.input-fp label:not(.md-container-ignore) {
+    position: absolute;
+    bottom: 86%;
+}
+
+.input-fp .md-icon-float>md-icon {
+    top: 22px;
+}
+
+.input-fp .md-input {
+    width: 70%;
+}
+
+#mail {
+    top: 23px;
+}
+
+.pr-text {
+    padding: 2px 9px 0px 9px;
+    text-align: center;
+    margin: 0px;
+}
+
+.input-fp {
+    margin: 0px;
+    vertical-align: middle;
+}
+
+.close-f{
+    text-shadow: 0 1px 0 #fff;
+    opacity: 1;
+    height: 22px;
+    overflow: hidden;
+    margin-top: -32px;
+    margin-right: 12px;
+    font-size: 20px;
+    color: #ffffff;
+    float: right;
+}
+.close-f:hover{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+
+
+#signup-r {
+    cursor: pointer;
+}

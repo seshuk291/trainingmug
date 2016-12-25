@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Java Jee Angular (industry ready program)",
+    "url": "https://github.com/angular/angular.js",
+    "imageurl": "img/java.jpg",
+    "lectures": "150",
+    "hours": "60",
+    "quizes": "100",
+    "rating": 5
+  },
+  {
+    "name": "UI Developer ( Industry Ready Program )",
+    "url": "https://github.com/angular/angular",
+    "imageurl": "img/coding.svg",
+    "lectures": "200",
+    "hours": "100",
+    "quizes": "150",
+    "rating": 5
+  },
+  {
+    "name": "Complete Java Programming ( JSE  7 / JSE 8)",
+    "url": "https://github.com/angular/material",
+    "imageurl": "img/java-bnr.jpg",
+    "lectures": "80",
+    "hours": "30",
+    "quizes": "50",
+    "rating": 4
+  },
+  {
+    "name": "SQL & JDBC",
+    "url": "https://github.com/angular/bower-material",
+    "imageurl": "img/database.svg",
+    "lectures": "200",
+    "hours": "100",
+    "quizes": "150",
+    "rating": 4
+  },
+  {
+    "name": "Web Development using Servlets & JSP",
+    "url": "https://github.com/angular/material-start",
+    "imageurl": "img/webde.png",
+    "lectures": "60",
+    "hours": "20",
+    "quizes": "30",
+    "rating": 5
+  },
+  {
+    "name": "Struts Framework",
+    "url": "https://github.com/angular/material-start",
+    "imageurl": "img/structs.jpg",
+    "lectures": "50",
+    "hours": "30",
+    "quizes": "30",
+    "rating": 4.5
+  },
+  {
+    "name": "Developing a web application from scratch",
+    "url": "https://github.com/angular/material-start",
+    "imageurl": "img/webdesigning.jpg",
+    "lectures": "50",
+    "hours": "20",
+    "quizes": "30",
+    "rating": 5
+  },
+  {
+    "name": "Spring Framework",
+    "url": "https://github.com/angular/material-start",
+    "imageurl": "img/spring.png",
+    "lectures": "50",
+    "hours": "30",
+    "quizes": "30",
+    "rating": 4.5
+  },
+  {
+    "name": "Hibernate",
+    "url": "https://github.com/angular/material-start",
+    "imageurl": "img/Hibernate.jpg",
+    "lectures": "40",
+    "hours": "25",
+    "quizes": "30",
+    "rating": 4.5
+  },
+  {
+    "name": "Developing an application from scratch",
+    "url": "https://github.com/angular/material-start",
+    "imageurl": "images/java.png",
+    "lectures": "50",
+    "hours": "30",
+    "quizes": "30",
+    "rating": 5
+  },
+  {
+    "name": "SQL /PLSQL",
+    "url": "https://github.com/angular/material-start",
+    "imageurl": "images/java.png",
+    "lectures": "50",
+    "hours": "30",
+    "quizes": "35",
+    "rating": 4
+  },
+  {
+    "name": "Developing an application database from scratch",
+    "url": "https://github.com/angular/material-start",
+    "imageurl": "images/java.png",
+    "lectures": "30",
+    "hours": "20",
+    "quizes": "50",
+    "rating": 4.5
+  },
+  {
+    "name": "Android",
+    "url": "https://github.com/angular/material-start",
+    "imageurl": "img/android.svg",
+    "lectures": "100",
+    "hours": "30",
+    "quizes": "50",
+    "rating": 4.5
+  },
+  {
+    "name": "Developing an application database from scratch",
+    "url": "https://github.com/angular/material-start",
+    "imageurl": "img/database.svg",
+    "lectures": "30",
+    "hours": "20",
+    "quizes": "40",
+    "rating": 5
+  }
+]

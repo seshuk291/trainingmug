@@ -1,0 +1,599 @@
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <!-- <h1 id="homeHeading">Learn by Industry Experts</h1> -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="box-desc">Learn by Industry Experts</h1>
+                    <!-- <h1 class="text-center subtitle">Java Internship</h1>-->
+                </div>
+                <div class="col-md-12 text-center subtitle">
+                    <span id="changethewords"></span>
+                </div>
+            </div>
+            <div class="row">
+
+                <!-- Inpuit box -->
+                <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 search">
+                    <div class="input-group">
+                        <!-- <input type="text" class="form-control input-lg" placeholder="Which course do you want to learn?"> -->
+                        <div ng-controller="DemoCtrl as ctrl" layout="column" ng-cloak="" class="form-control input-lg">
+                            <md-content layout="column">
+                                <form ng-submit="$event.preventDefault()">
+                                    <md-autocomplete md-selected-item="ctrl.selectedItem" md-search-text-change="ctrl.searchTextChange(ctrl.searchText)" md-search-text="ctrl.searchText" md-selected-item-change="ctrl.selectedItemChange(item)" md-items="item in ctrl.querySearch(ctrl.searchText) | filter:ctrl.searchText" md-item-text="item.name" md-min-length="0" placeholder="Which Course do you want to learn?" md-menu-class="autocomplete-custom-template">
+                                       <a href="/post/{{item.url}}">
+                                        <md-item-template>
+                                            <div class="item-title">
+                                                <md-icon><img ng-src="{{item.imageurl}}"></md-icon>
+                                                <span class="inner-item-title">{{item.name}}</span>
+                                                <br>
+                                            </div>
+                                            <div class="item-metadata">
+                                                <span class="item-metastat">
+                                      <span class="fa fa-files-o"></span>
+                                                <span>{{item.lectures}}</span> lectures
+                                                </span>
+                                                <span class="item-metastat">
+                                      <span class="fa fa-play-circle"></span>
+                                                <span>{{item.hours}}</span>+ Hrs Video sessions
+                                                </span>
+                                                <span class="item-metastat">
+                                    <span class="fa fa-wpforms"></span>
+                                                <span>{{item.quizes}}</span>+ Quizes
+                                                </span>
+                                            </div>
+                                        </md-item-template>v 
+                                        </a>
+                                    </md-autocomplete>
+                                </form>
+                            </md-content>
+                        </div>
+                        <span class="input-group-addon btn btn-lg btn-primary search-icon">
+                              <i class="glyphicon glyphicon-search"></i>
+                          </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="features" id="triggernav">
+                    <ul class="suggestions">
+                        <li><a href="courses/java-jee-angular">Java JEE Angular</a></li>|
+                        <li><a href="courses/dot-net">.Net Internship</a></li>|
+                        <li><a href="">Angular Js</a></li>|
+                        <li><a href="">Phone Gap</a></li>|
+                        <li><a href="">Spring</a></li>|
+                        <li><a href="">Hibernate</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="features">
+                    <ul class="row3">
+                        <li class="row3-item">
+                            <img src="./images/icons/light-bulb-light-blue.svg" alt="light" class="svg-icons">
+                            <a>Intellectual Learning Management System</a>
+                        </li>
+                        <li class="row3-item">
+                            <img src="./images/icons/play-button-light-blue.svg" alt="play" class="svg-icons">
+                            <a>Webinars By Industry Experts</a>
+                        </li>
+                        <li class="row3-item">
+                            <img src="./images/icons/increasing-data-graphic.svg" alt="" class="svg-icons">
+                            <a>Training Progress & Analytics</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="services" id="triggerfooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Internship Programs</h2>
+
+            </div>
+        </div>
+
+        <div class="row owl-demo">
+            <!-- <div class="for-icons">
+                    <div class="glyphicon glyphicon-menu-left"></div>
+                </div> -->
+            <div class="col-md-4 internships">
+
+                <div class="box item">
+                    <div class="image2">
+                        <a href="#" class="effect"><img src="img/javajee.jpg">
+                            <div>
+                                <ul class="box-list">
+                                    <li class="text-center"><span>Course Highlights</span>
+                                        <li class="feat">( JSE , JDBC, Servlets, JSP, Spring, Hibernate, Web Services, Angular )</span>
+                                        </li>
+                                    </li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>100 Lectures
+                                    </li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>50+ Hrs of video sessions</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>10+ Assignments</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>50+ Quizzes</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>2 Real time case studies</li>
+                                    <!--  <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>Industry ready in 8 weeks</li> -->
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="heading">
+                        <h2>Java Jee Angular</h2>
+
+                        <span class="rateYo1"></span>
+                        <div class="row price">
+                            <div>
+                                <div><sup>$</sup>149<span class="delete"><del>$300</del>
+                                <span class="learners">
+                                    <i class="fa fa-users" aria-hidden="true"></i>10 Learners
+                                </span></span>
+                                </div>
+                            </div>
+                            <a href="/courses/java-jee-angular" refresh><md-button class="knowmore md-raised md-warn">know more</md-button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 internships">
+                <div class="box item">
+                    <div class="image2">
+                        <a href="#" class="effect"><img src="img/python.jpg">
+                            <div>
+                                <ul class="box-list">
+                                    <li class="text-center"><span>Course Highlights</span>
+                                        <li class="feat">(Android, SQLite )</li>
+                                    </li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>200 Lectures
+                                    </li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>80+ Hrs of video sessions</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>15+ Assignments</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>50+ Quizzes</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>3 Real time case studies</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>Industry ready in 8 weeks</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="heading">
+                        <h2>Android Application Development</h2>
+
+                        <span class="rateYo"> 
+                             </span>
+                        <div class="row price">
+                            <div>
+                                <div><sup>$</sup>100<span class="delete"><del>$150</del>
+                                <span class="learners">
+                                    <i class="fa fa-users" aria-hidden="true"></i>20 Learners
+                                </span></span>
+                                </div> 
+                            </div>
+                            <a href="/courses/android-application-development" refresh><md-button class="knowmore md-raised md-warn">know more</md-button></a>
+                            <!-- <button class="knowmore btn btn-primary">know more</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 internships">
+                <div class="box item">
+                    <div class="image2">
+                        <a href="/" class="effect"><img src="img/dotnet.jpg">
+                            <div>
+                                <ul class="box-list">
+                                    <li class="text-center"><span>Course Highlights</span>
+                                        <li class="feat">(HTML5, CSS3, JavaScript, AJAX, jQuery, JSON, Angular JS )</li>
+                                    </li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>60+ Hrs of video sessions</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>15+ Assignments</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>100+ Quizzes</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>3 Real time case studies</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span> Industry Ready in 8 weeks</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="heading">
+                        <h2>Full Stack Web Development</h2>
+
+                        <span class="rateYo"></span>
+                        <div class="row price">
+                            <div>
+                                <div><sup>$</sup>150<span class="delete"><del>$200</del>
+                                <span class="learners">
+                                    <i class="fa fa-users" aria-hidden="true"></i>20 Learners
+                                </span></span>
+                                </div>
+                            </div>
+                            <a href="/courses/full-stack-web-development"><md-button class="knowmore md-raised md-warn">know more</md-button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 internships">
+                <div class="box item">
+                    <div class="image2">
+                        <a href="#" class="effect"><img src="img/dotnet.jpg">
+                            <div>
+                                <ul class="box-list">
+                                    <li class="text-center"><span>Course Highlights</span></li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>120+ Hrs of video lectures</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>20+ Assignments</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>80+ Quizzes</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>3 Real time projects</li>
+
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="heading">
+                        <h2>.Net Framework</h2>
+
+                        <span class="rateYo"></span>
+                        <div class="row price">
+                            <div>
+                                <div><sup>$</sup>149<span class="delete"><del>$300</del>
+                                <span class="learners">
+                                    <i class="fa fa-users" aria-hidden="true"></i>150 Learners
+                                </span></span>
+                                </div>
+                            </div>
+                            <a href="/courses/dot-net"><md-button class="knowmore md-raised md-warn">know more</md-button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Section 2 -->
+<section class="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">All Courses</h2>
+
+            </div>
+        </div>
+
+        <div class="row owl-demo" id="">
+
+
+            <div class="col-md-4 internships">
+                <div class="box item">
+                    <div class="image2">
+                        <a href="#" class="effect"><img src="img/java.jpg">
+                            <div>
+                                <ul class="box-list">
+                                    <li class="text-center"><span>Course Highlights</span></li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>100 lectures</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>30+ Hrs of video content</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>10+ Assignments</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>20+ Quizzes</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>1 Real time case study</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="heading">
+                        <h2 class="title">Complete Java Programming ( JSE7/JSE8)</h2>
+                        <span class="rateYo"></span>
+                        <div class="row price">
+                            <div>
+                                <div><sup>$</sup>50<span class="delete"><del>$75</del>
+                                <span class="learners">
+                                    <i class="fa fa-users" aria-hidden="true"></i>100 Learners
+                                </span></span>
+                                </div>
+                            </div>
+                            <md-button class="knowmore md-raised md-warn">know more</md-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 internships">
+                <div class="box item">
+                    <div class="image2">
+                        <a href="#" class="effect"><img src="img/webdesigning.jpg">
+                            <div>
+                                <ul class="box-list">
+                                    <li class="text-center"><span>Course Highlights</span></li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>80 Lectures</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>25+ Hrs of video content</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>10+ Assignments</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>20+ Quizzes</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>1 Real time case study</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="heading">
+                        <h2 class="title">Web application development using Servlet & JSP</h2>
+                        <span class="rateYo"></span>
+                        <div class="row price">
+                            <div>
+                                <div><sup>$</sup>50<span class="delete"><del>$75</del>
+                                <span class="learners">
+                                    <i class="fa fa-users" aria-hidden="true"></i>40 Learners
+                                </span></span>
+                                </div>
+                            </div>
+                            <md-button class="knowmore md-raised md-warn">know more</md-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 internships">
+                <div class="box item">
+                    <div class="image2">
+                        <a href="#" class="effect"><img src="img/webdesigning.jpg">
+                            <div>
+                                <ul class="box-list">
+                                    <li class="text-center"><span>Course Highlights</span></li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>80 Lectures</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>30+ Hrs of video content</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>10+ Assignments</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>20+ Quizzes</li>
+                                    <li><span class="glyphicon glyphicon-menu-right right-arrow"></span>1 Real time projects</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="heading">
+                        <h2 class="title">Developing web application from scratch using Java + JDBC + Servlets + JSP + MySQL</h2>
+
+                        <span class="rateYo"></span>
+                        <div class="row price">
+                            <div>
+                                <div><sup>$</sup>149<span class="delete"><del>$300</del>
+                                <span class="learners">
+                                    <i class="fa fa-users" aria-hidden="true"></i>80 Learners
+                                </span></span>
+                                </div>
+                            </div>
+                            <md-button class="knowmore md-raised md-warn">know more</md-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why training mug -->
+
+<section class="why-us-2">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Why TrainingMug?</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="scrollreveal-section">
+                <div class="col-md-6 jswp-1-1">
+                    <div class="image-container">
+                        <img src="img/a1.png">
+                    </div>
+                </div>
+
+                <div class="col-md-6 jswp-1-2">
+                    <h3>Efficient Learning Management System by Industry Experts</h3>
+                    <div class="why-us-list row">
+                        <div class="col-md-2"><i class="fa fa-check-circle-o"></i></div>
+                        <div class="col-md-10">
+                            <p>Our quality courses are designed by Industry experts.</p>
+                        </div>
+                    </div>
+                    <div class="why-us-list row">
+                        <div class="col-md-2"><i class="fa fa-check-circle-o"></i></div>
+                        <div class="col-md-10">
+                            <p>You can learn at any time anywhere any number of times</p>
+                        </div>
+                    </div>
+                    <div class="why-us-list row">
+                        <div class="col-md-2"><i class="fa fa-check-circle-o"></i></div>
+                        <div class="col-md-10">
+                            <p>Each topic is well explained followed by Hands on exercises, Interview Questions and technical quizzes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="why-us-2">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="col-md-6 jswp-2-1">
+                    <h3>24/7 Technical Support</h3>
+                    <div class="why-us-list row">
+                        <div class="col-md-2"><i class="fa fa-check-circle-o"></i></div>
+                        <div class="col-md-10">
+                            <p>Student can clarify his/her doubts using our24/7 technical support using discussion forums and chats</p>
+                        </div>
+                    </div>
+                    <div class="why-us-list row">
+                        <div class="col-md-2"><i class="fa fa-check-circle-o"></i></div>
+                        <div class="col-md-10">
+                            <p>We are just a phone call or an email away to assist you in any technical difficulty</p>
+                        </div>
+                    </div>
+                    <div class="why-us-list row">
+                        <div class="col-md-2"><i class="fa fa-check-circle-o"></i></div>
+                        <div class="col-md-10">
+                            <p>Student can access knowledgebase to search for the best answers for his/her questions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 jswp-2-2">
+                    <div class="image-container">
+                        <img src="img/a2.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="why-us-2">
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12">
+                <div class="col-md-6 jswp-3-1">
+                    <div class="image-container">
+                        <img src="img/a1.png">
+                    </div>
+                </div>
+                <div class="col-md-6 jswp-3-2">
+                    <h3>Blogs & Webinars by Industry Leaders</h3>
+                    <div class="why-us-list row">
+                        <div class="col-md-2"><i class="fa fa-check-circle-o"></i></div>
+                        <div class="col-md-10">
+                            <p>Conducts frequent webinars by Industry leaders in a particular domain</p>
+                        </div>
+                    </div>
+                    <div class="why-us-list row">
+                        <div class="col-md-2"><i class="fa fa-check-circle-o"></i></div>
+                        <div class="col-md-10">
+                            <p>Helps you to get connected with industry experts</p>
+                        </div>
+                    </div>
+                    <div class="why-us-list row">
+                        <div class="col-md-2"><i class="fa fa-check-circle-o"></i></div>
+                        <div class="col-md-10">
+                            <p>Helps you to understand the latest trends in the Industry</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="why-us-2">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="col-md-6 jswp-4-1">
+                    <h3>Training Progress & Analytics</h3>
+                    <div class="why-us-list row">
+                        <div class="col-md-2"><i class="fa fa-check-circle-o"></i></div>
+                        <div class="col-md-10">
+                            <p>Helps you to track your training progress</p>
+                        </div>
+                    </div>
+                    <div class="why-us-list row">
+                        <div class="col-md-2"><i class="fa fa-check-circle-o"></i></div>
+                        <div class="col-md-10">
+                            <p>Analyses your average spending time per day for learning course</p>
+                        </div>
+                    </div>
+                    <div class="why-us-list row">
+                        <div class="col-md-2"><i class="fa fa-check-circle-o"></i></div>
+                        <div class="col-md-10">
+                            <p>Analyses your strong and weak area of expertise on each topic of the course</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 jswp-4-2">
+                    <div class="image-container">
+                        <img src="img/a2.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Testimonials section -->
+
+<section class="testimonials">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">TESTIMONIALS</h2>
+                <div id="reviews">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="quote">
+                                <i class="fa fa-quote-left fa-4x"></i>
+                            </div>
+                            <div class="slider">
+                                <div class="slide">
+                                    <div class="avatar">
+                                        <img src="img/boy2.svg" class="circle">
+                                        <a class="linked-in">
+                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                        </a>
+                                        </img>
+                                        <div class="avatar-title"><span>-</span>Mahesh JayaChandran</div>
+                                    </div>
+
+                                    <div>
+                                        <p>"I just loved the TrainingMug’s effective learning system with complete training progress and analytics, which boosts me complete the training as per my schedule. The Instructor is very knowledgeable and given industry related case studies to get hands on. Overall I am really satisfied and recommend TrainingMug strongly.</p>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="avatar">
+                                        <img src="img/girl.svg" class="circle">
+                                        <a class="linked-in">
+                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                        </a>
+                                        </img>
+                                        <div class="avatar-title"><span>-</span> Jane Doe</div>
+                                    </div>
+
+                                    <div>
+                                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum magnam eius ipsa hic voluptates excepturi suscipit ducimus nihil nobis. Soluta deleniti voluptate beatae sint laudantium ducimus ea facilis quis neque!"</p>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="avatar">
+                                        <img src="img/boy.svg" class="circle">
+                                        <a class="linked-in">
+                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                        </a>
+                                        </img>
+                                        <div class="avatar-title"><span>-</span>Giri Samudrala</div>
+                                    </div>
+
+                                    <div>
+                                        <p>"I have enrolled for Complete Java Programming ( JSE 7 / JS8 ) to update myself in Java Programming. Even though I am new to programming, I was able to grasp all the concepts and practice the exercises. The Instructor effectively delivered the topics with easy explanations and programming techniques for beginners. I am able to write coding for my testing automation. Thank you TrainingMug."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
