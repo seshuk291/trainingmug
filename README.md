@@ -1,1 +1,1 @@
-# trainingmug.github.io
+# trainingmug
